@@ -369,6 +369,9 @@ function runTests() {
 
 	// test big sets
 	AssertEquals('getLastElementFromBigSet', 299, bigSet.get(bigSet.length() - 1));
+
+	// ensure that original set is still unchanged
+	AssertEquals('ensureUnchangedOriginalSet', [1, 2, 3, 4].toString(), immutableItems);
 }
 
 function AssertEquals(testName, expected, actual) {
