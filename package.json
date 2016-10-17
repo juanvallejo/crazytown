@@ -1,0 +1,29 @@
+{
+  "name": "crazytown",
+  "version": "1.0.0",
+  "description": "Purely-functional data structure for sets",
+  "main": "index.js",
+  "scripts": {
+    "test": "node . test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanvallejo/crazytown.git"
+  },
+  "keywords": [
+    "Purely",
+    "functional",
+    "programming",
+    "data",
+    "structures",
+    "sets",
+    "arrays",
+    "collections"
+  ],
+  "author": "juanvallejo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanvallejo/crazytown/issues"
+  },
+  "homepage": "https://github.com/juanvallejo/crazytown#readme"
+}
