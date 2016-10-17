@@ -283,7 +283,13 @@ function collectionFromNode(collection, node) {
 
 // only used for testing - should be removed once
 // library is ready for production.
-(function main() {
+(function main(argv) {
+	if (argv.length && argv[2] == 'test') {
+		runTests();
+	}
+})(process.argv);
+
+function runTests() {
 	var immutableItems = [1, 2, 3, 4];
 	var collection = CTCollection(immutableItems);
 	var allButOne = collection.pop();
@@ -363,7 +369,7 @@ function collectionFromNode(collection, node) {
 
 	// test big sets
 	AssertEquals('getLastElementFromBigSet', 299, bigSet.get(bigSet.length() - 1));
-})();
+}
 
 function AssertEquals(testName, expected, actual) {
 	if (expected != actual) {
@@ -380,3 +386,5 @@ function AssertNotEquals(testName, expected, actual) {
 	}
 	console.log('TEST OK', testName);
 }
+
+module.exports = CTCollection;
